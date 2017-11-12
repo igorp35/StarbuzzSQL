@@ -42,7 +42,7 @@ public class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
                             + "_id INTEGER PRIMARY KEY AUTOINCRIMENT,"
                             + "NAME TEXT,"
                             + "DESCRIPTION TEXT,"
-                            + "IMAGE_RESURS_ID INTEGER);"
+                            + "IMAGERESURSID INTEGER);"
             );
             //Вставка данных
             insertDrink(sqLiteDatabase, "Latte", "A couple of espresso shots with steamed milk", R.drawable.latte);
@@ -64,7 +64,7 @@ public class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
         ContentValues drinkValues = new ContentValues();
         drinkValues.put("NAME", name);
         drinkValues.put("DESCRIPTION", description);
-        drinkValues.put("IMAGE_RESURS_ID INTEGER", resurseId);
+        drinkValues.put("IMAGERESURSID", resurseId);
         sqLiteDatabase.insert("DRINK", null, drinkValues);
     }
 }
